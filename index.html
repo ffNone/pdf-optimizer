@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منشئ ملفات PDF</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>منشئ ملفات PDF</h1>
+            
+            <form id="pdfForm">
+                <div class="form-group">
+                    <label for="fileName">اسم الملف:</label>
+                    <input 
+                        type="text" 
+                        id="fileName" 
+                        placeholder="أدخل اسم الملف (بدون .pdf)" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="textContent">النص:</label>
+                    <textarea 
+                        id="textContent" 
+                        placeholder="أدخل النص هنا..." 
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="images">الصور:</label>
+                    <input 
+                        type="file" 
+                        id="images" 
+                        accept="image/*" 
+                        multiple
+                    >
+                    <div id="imagePreview" class="image-preview"></div>
+                </div>
+
+                <button type="submit" class="btn-submit">تحميل PDF</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
